@@ -23,10 +23,10 @@ function item_to_html(item){
         .append('<h4 class="my-0 fw-normal">' + item.nom + '</h4>');
     item_detail = $('<ul></ul>')
         .addClass('list-unstyled mt-3 mb-4')
-        .append('<li>Quantite. :' + item.qte_inventaire +'</li>')
-        .append('<li>Categorie. :' + item.categorie.nom +'</li>')
-        .append('<br><br>')
-        .append('<li>Description. :' + item.description +'</li>');
+        .append('<li id="quantite">Quantite : ' + item.qte_inventaire +'</li>')
+        .append('<li id="categorie">Categorie : ' + item.categorie.nom +'</li>')
+        .append('<li id="description">Description : ' + item.description +'</li>')
+        .append('<i class="fa-solid fa-cart-shopping fa-2xl center"></i>');
     item_body = $('<div></div>')
         .addClass('card-body')
         .append(' <h1 class="card-title text-center"> $' + item.prix +'</h1>');
